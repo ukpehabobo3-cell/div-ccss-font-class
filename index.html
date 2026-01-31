@@ -1,0 +1,1025 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- SEO Meta Tags -->
+<meta content="Use our online image color picker to extract HTML colors from image and accurate color codes. Upload an image to get HEX, RGB, and HSL values instantly. The ultimate image Web-Color picker tool for designers and developers." name="description"/>
+<meta content="hex color from image, image hex color, hex color picker from image, color picker from image, Online Image Color Picker, color from image, image color, HTML color image picker, HEX RGB values, image color detector, web design colors, 2025 design trends color image" name="keywords"/>
+<meta content="Html-Color-Codes.info" name="author"/>
+<meta content="index, follow" name="robots"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Image Color Picker Online - Extract HTML Colors From Image (Hex,RGB)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css" rel="stylesheet"/>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5683009700012859"></script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TH6V9TS4L2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TH6V9TS4L2');
+</script>
+<script src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
+<script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
+<script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+<script>
+    window.ezstandalone = window.ezstandalone || {};
+    ezstandalone.cmd = ezstandalone.cmd || [];
+</script>
+<style>
+    .responsive-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    @media (max-width: 768px) {
+      .responsive-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    @media (max-width: 768px) {
+      .responsive-layout {
+        flex-direction: column !important;
+        align-items: center;
+      }
+    } {
+      --bg-color: #0f172a;
+      --text-color: #f8fafc;
+      --accent-color: #C11D54;
+      --card-bg: rgba(255,255,255,0.05);
+      --border-color: rgba(255,255,255,0.15);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+    .container {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .upload-area {
+      background: var(--card-bg);
+      border: 2px dashed var(--border-color);
+      padding: 2rem;
+      text-align: center;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+    .upload-area input[type="file"] {
+      display: none;
+    }
+    .upload-area label {
+      background: var(--accent-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    canvas {
+      display: block;
+      margin: 2rem auto;
+      border-radius: 8px;
+      max-width: 100%;
+      cursor: crosshair;
+    }
+    .color-display {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--bg-color);
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .color-box {
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
+      padding: 1rem 1.5rem;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: white;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      border: 1px solid var(--border-color);
+      transition: transform 0.2s;
+    }
+    .color-box:hover {
+      transform: scale(1.02);
+    }
+    .swatch1 {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    }
+    .value-box {
+      padding: 0.35rem 0.6rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      transition: background 0.2s;
+      font-family: monospace;
+    }
+      .responsive-layout {
+  flex-direction: row;
+}
+@media (max-width: 767px) {
+  .responsive-layout {
+    flex-direction: column;
+  }
+}
+
+.card{
+    width:min(720px, 92vw); background:var(--panel);
+    border:1px solid #222632; border-radius:var(--radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    padding:24px 22px;
+  }
+  .title{font-size:20px; font-weight:700; margin:2px 0 16px}
+  .row{display:flex; gap:16px; flex-wrap:wrap; align-items:flex-start}
+  .field{flex:1 1 280px; display:flex; gap:10px; align-items:center}
+  .label{font-weight:600; color:#cdd6e0}
+  .input{
+    flex:1; height:46px; border-radius:12px; padding:0 14px;
+    border:1px solid #293041; background:#0e1117; color:var(--text);
+    outline:0; font-weight:600; letter-spacing:.5px;
+  }
+  .input:focus{border-color:var(--accent); box-shadow:0 0 0 4px var(--ring)}
+  .btn{
+    height:46px; padding:0 16px; border-radius:12px; border:1px solid #2b3242;
+    background:#10141c; color:var(--text); cursor:pointer; font-weight:700;
+  }
+  .btn.primary{background:linear-gradient(180deg,#60a5fa,#3b82f6); border:none}
+  .btn.primary:hover{filter:brightness(1.05)}
+  .error{color:var(--danger); font-weight:600; min-height:1.2em}
+  .error[hidden]{display:block; visibility:hidden}
+  .preview{
+    flex: 0 0 240px; border-radius:16px; overflow:hidden;
+    border:1px solid #2a3142; background:#111318;
+  }
+  .swatch{height:160px; display:grid; place-items:center}
+  .swatch .big{font-size:18px; font-weight:800; text-transform:uppercase}
+  .meta{padding:12px 14px; display:grid; gap:6px; background:#0f131b}
+  .kv{display:flex; justify-content:space-between; gap:12px; color:var(--muted)}
+  .kv b{color:var(--text)}
+  .help{margin-top:12px; color:var(--muted); font-size:14px}
+
+
+  </style>
+</head>
+<body>
+<div class="bubbles">
+<span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span>
+</div>
+<!-- Navbar -->
+<nav class="main-menu" style="max-width: 1260px; margin: auto; background-color:#0f172a; font-size:15px;">
+<div class="logo">
+<a href="https://html-color-codes.info"><img alt="HTML Color Codes Logo" height="62" src="https://html-color-codes.info/img/logo3.gif" style="display: block;" width="195"/></a>
+</div>
+<button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</button>
+<div class="nav-links" id="navLinks" style="font-size:14px;">
+<a class="custom-style-61" href="https://html-color-codes.info" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">Color Picker</a>
+<a class="custom-style-61" href="https://html-color-codes.info/colors-from-image" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">Image Color Picker</a>
+<a class="custom-style-61" href="https://html-color-codes.info/color-names" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">Color Names</a>
+<a class="custom-style-61" href="https://html-color-codes.info/convert-color-format" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">Convert Format</a>
+<a class="custom-style-61" href="https://html-color-codes.info/library" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">Color Library</a>
+<!-- Tools Dropdown -->
+<div class="dropdown">
+<a href="#" onclick="toggleDropdown(event)">More Tools ▾</a>
+<div class="dropdown-menu" id="dropdownMenu">
+<a href="https://html-color-codes.info/web-safe-colors">Web safe Colors</a>
+<a href="https://html-color-codes.info/html-editor">HTML Editor</a>
+<a href="#">Accessibility Checker</a>
+<a href="https://html-color-codes.info/about">About</a>
+<a href="https://html-color-codes.info/contact">contact</a>
+<a href="https://html-color-codes.info/privacypolicy">Privacy Policy</a>
+</div>
+</div>
+</div>
+</nav>
+<section>
+<div class="container">
+<h1 style="color: #fff;">Image <a href="https://html-color-codes.info" style="color:#C11D54;" target="_blank">Color Picker </a> 🎨 Pick HEX, RGB from Image</h1>
+<p style="text-align:center; max-width:720px; margin: 0 auto 1.5rem; color:#cbd5e1; font-size: 1.05rem;">
+      Upload any image and click anywhere on it to discover the exact color codes instantly. Ideal for designers, developers, and artists who need precise color values from visuals.
+    </p>
+<div class="upload-area">
+<label for="imageInput" style="background: #C11D54;">Upload an Image</label>
+<input accept="image/*" id="imageInput" type="file"/>
+</div>
+<!-- Load Image From URL -->
+<div style="margin-bottom: 1.5rem; text-align: center;">
+<input id="imageUrlInput" placeholder="Paste image URL here https://" style="width: 70%; padding: 10px; border-radius: 8px; border: 1px solid #444; background: #1e293b; color: #fff;" type="text"/>
+<button onclick="loadImageFromURL()" style="padding: 10px 20px; background:#C11D54; color:white; border:none; border-radius:6px; margin-left:8px;">
+    Load Image
+  </button>
+</div>
+
+ <section class="card">
+    <h2 class="title">HEX Color Finder</h2>
+
+    <div class="row">
+      <div class="field" style="min-width:320px">
+        <label for="hex" class="label">HEX</label>
+        <input id="hex" class="input" placeholder="#1DA1F2 or #1DF" maxlength="7" />
+        <button id="apply" class="btn primary" type="button">Find</button>
+      </div>
+
+      <div class="preview" id="preview" style="display:none;">
+        <div id="swatch" class="swatch">
+          <div class="big" id="hexOut"></div>
+        </div>
+        <div class="meta">
+          <div class="kv"><span>RGB</span><b id="rgbOut"></b></div>
+          <div class="kv"><span>HSL</span><b id="hslOut"></b></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="msg" class="error" hidden></div>
+  </section>
+
+<div class="responsive-layout" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; justify-content: center;">
+<div style="flex: 1; min-width: 300px;">
+<canvas id="imageCanvas"></canvas>
+<div id="autoPaletteBox" style="margin-top:2rem;">
+<h3 style="color:#fff; font-size:1.2rem;">🎨 Color Palette</h3>
+<div id="palettePreview" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;"></div>
+</div></div>
+<div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 1.5rem;"><div id="zoomBoxWrapper" style="margin-top:1rem; text-align:center;"><h3 style="color:#fff;">🔍 Zoom View (Click to Pick)</h3><canvas height="100" id="zoomCanvas" style="display:none; border:2px solid #888; margin:auto; border-radius:6px;" width="100"></canvas></div>
+<div class="color-display" id="pickedColorInfo" style="display:none">
+<div class="color-box">
+<div class="swatch1" id="colorSwatch"></div>
+<div style="display: flex; flex-direction: column; gap: 0.3rem;">
+<div><strong>HEX:</strong> <span class="value-box" id="hexValue"></span></div>
+<div><strong>RGB:</strong> <span class="value-box" id="rgbValue"></span></div>
+<div><strong>Coordinates:</strong> <span class="value-box" id="xyValue"></span></div>
+</div>
+</div>
+</div>
+<div id="colorUsageBox" style="display:none; background: var(--card-bg); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+<h3 style="margin-top: 0; text-align:center; color: #fff;">📊 2025 Color Usage Trend</h3>
+<canvas height="180" id="usageChart" style="margin-bottom: 1rem;"></canvas>
+</div>
+<div id="extractedColors" style="display: none;"></div>
+</div>
+</div>
+</div>
+</section>
+<section style="margin: 3rem auto; padding: 0 1rem; max-width: 1100px;">
+<h2 style="font-size: 1.8rem; color: #C11D54;">🖼️ What Is an Image Color Picker?</h2>
+<p style="max-width: 700px; line-height: 1.6; color: #cbd5e1;">
+        An image color picker allows you to upload any image and instantly identify the exact color code (HEX, RGB) at any point within the image. Whether you're working on web design, branding, or digital art, this tool helps you extract precise colors from photos, logos, UI screenshots, or even nature scenes. Click on any area of the uploaded image to see the selected pixel’s color, along with its color usage trend in modern 2025 design systems.
+      </p>
+</section>
+<section style="margin: 3rem auto; padding: 0 1rem; max-width: 1100px;">
+<h2 style="font-size: 1.6rem; color: #C11D54;">🛠️ How to Use the Image Color Picker</h2>
+<ol style="line-height: 1.7; max-width: 720px; color: #cbd5e1; padding-left: 1.2rem;">
+<li style="margin-bottom: 0.75rem;"><strong>Upload your image:</strong> Click the "Upload an Image" button and choose any image file from your device (JPEG, PNG, etc.).</li>
+<li style="margin-bottom: 0.75rem;"><strong>Click on the image:</strong> Once your image appears, click anywhere on it to pick a color. The HEX and RGB values will appear instantly.</li>
+<li style="margin-bottom: 0.75rem;"><strong>View usage trend:</strong> See a visual chart showing how popular the selected color is in 2025 web design trends.</li>
+<li style="margin-bottom: 0.75rem;"><strong>Use the color:</strong> Copy the color code for use in CSS, design apps, or share it with your team.</li>
+</ol>
+</section>
+<!-- FOOTER -->
+<footer class="custom-style-56">
+<div class="custom-style-57">
+<div class="logo custom-style-0">
+<span class="custom-style-58">{</span>
+<span class="custom-style-59">Html-Color-Codes.info</span>
+<span class="custom-style-58">}</span>
+</div>
+<div class="custom-style-60">
+<a class="custom-style-61" href="https://html-color-codes.info" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">Color Picker</a>
+<a class="custom-style-61" href="https://html-color-codes.info/colors-from-image" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">Image Color Picker</a>
+<a class="custom-style-61" href="https://html-color-codes.info/color-names" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">Color Names</a>
+<a class="custom-style-61" href="https://html-color-codes.info/convert-color-format" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">Convert Format</a>
+<a class="custom-style-61" href="https://html-color-codes.info/html-editor" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">HTML Editor</a>
+<a class="custom-style-61" href="https://html-color-codes.info/about" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">About</a>
+<a class="custom-style-61" href="https://html-color-codes.info/privacypolicy" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">Privacy Policy</a>
+<a href=""></a>
+<a class="custom-style-61" href="https://html-color-codes.info/contact" onmouseout="this.style.color='#94a3b8'" onmouseover="this.style.color='#C11D54'">Contact</a>
+</div>
+<div class="custom-style-62">
+      © 2025 <strong>Html-Color-Codes.info</strong> — All rights reserved. Crafted with ❤️ for developers and designers.
+    </div>
+</div>
+</footer>
+
+
+
+<script>
+(function() {
+  const hexInput = document.getElementById('hex');
+  const msg = document.getElementById('msg');
+  const preview = document.getElementById('preview');
+  const swatch = document.getElementById('swatch');
+  const hexOut = document.getElementById('hexOut');
+  const rgbOut = document.getElementById('rgbOut');
+  const hslOut = document.getElementById('hslOut');
+
+  const isValidHex = s => /^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(s.trim());
+
+  const normalizeHex = s => {
+    s = s.trim().toUpperCase();
+    if (s[0] !== '#') s = '#' + s;
+    if (s.length === 4) {
+      s = '#' + s[1] + s[1] + s[2] + s[2] + s[3] + s[3];
+    }
+    return s;
+  };
+
+  const hexToRgb = hex => {
+    const v = parseInt(hex.slice(1), 16);
+    return { r: (v >> 16) & 255, g: (v >> 8) & 255, b: v & 255 };
+  };
+
+  const rgbToHsl = (r, g, b) => {
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r,g,b), min = Math.min(r,g,b);
+    let h, s, l = (max + min) / 2;
+    if (max === min) { h = s = 0; }
+    else {
+      const d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        case b: h = (r - g) / d + 4; break;
+      }
+      h /= 6;
+    }
+    return {
+      h: Math.round(h * 360),
+      s: Math.round(s * 100),
+      l: Math.round(l * 100)
+    };
+  };
+
+  function applyHex(input) {
+    if (!isValidHex(input)) {
+      msg.textContent = 'Invalid HEX color format.';
+      msg.hidden = false;
+      preview.style.display = 'none';
+      return;
+    }
+    msg.hidden = true;
+    const hex = normalizeHex(input);
+    const rgb = hexToRgb(hex);
+    const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+
+    swatch.style.background = hex;
+    swatch.style.color = (rgb.r*0.299 + rgb.g*0.587 + rgb.b*0.114) > 186 ? '#000' : '#fff';
+    hexOut.textContent = hex;
+    rgbOut.textContent = `${rgb.r}, ${rgb.g}, ${rgb.b}`;
+    hslOut.textContent = `${hsl.h}°, ${hsl.s}%, ${hsl.l}%`;
+
+    preview.style.display = 'block';
+  }
+
+  document.getElementById('apply').addEventListener('click', () => applyHex(hexInput.value));
+  hexInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') applyHex(hexInput.value);
+  });
+  document.getElementById('fill').addEventListener('click', async () => {
+    try {
+      const text = await navigator.clipboard.readText();
+      hexInput.value = text.trim();
+    } catch {
+      msg.textContent = 'Clipboard not accessible.';
+      msg.hidden = false;
+    }
+  });
+})();
+</script>
+
+
+
+<!-- Start LOGO ANIMATION -->
+<script>
+const text = "Html-Color-Codes.info";
+const segments = text.split("-");
+const colorCycles = ['#0ADCBF', '#E14FFC', '#FF62A5', '#FFB828'];
+let segIndex = 0, charIndex = 0;
+const el = document.getElementById("typed-text");
+
+// Site Languages
+
+function toggleLangDropdown(event) {
+  event.preventDefault();
+  const menu = document.getElementById("languageMenu");
+  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+  event.stopPropagation();
+}
+
+document.addEventListener("click", function (e) {
+  const langMenu = document.getElementById("languageMenu");
+  const toolsMenu = document.getElementById("dropdownMenu");
+
+  if (!e.target.closest(".dropdown")) {
+    if (langMenu) langMenu.style.display = "none";
+    if (toolsMenu) toolsMenu.style.display = "none";
+  }
+});
+
+
+function typeLogo() {
+  if (!el) return;
+
+  let result = "";
+  for (let i = 0; i < segIndex; i++) {
+    const color = colorCycles[i % colorCycles.length];
+    result += <span style="color:${color};">${segments[i]}-</span>;
+  }
+
+  const currentColor = colorCycles[segIndex % colorCycles.length];
+  const currentText = segments[segIndex].slice(0, charIndex);
+  result += <span style="color:${currentColor};">${currentText}</span>;
+  el.innerHTML = result;
+
+  if (charIndex < segments[segIndex].length) {
+    charIndex++;
+    setTimeout(typeLogo, 80); // faster typing
+  } else {
+    segIndex++;
+    charIndex = 0;
+    if (segIndex < segments.length) {
+      setTimeout(typeLogo, 300); // slight pause between segments
+    } else {
+      // Fade out and restart
+      el.style.transition = "opacity 0.6s ease";
+      el.style.opacity = 0;
+      setTimeout(() => {
+        el.innerHTML = "";
+        el.style.opacity = 1;
+        segIndex = 0;
+        charIndex = 0;
+        typeLogo();
+      }, 800); // wait for fade out before reset
+    }
+  }
+}
+
+typeLogo();
+</script>
+<script>
+
+    // Load a default image when page loads
+window.addEventListener("DOMContentLoaded", () => {
+  const defaultImg = new Image();
+  defaultImg.crossOrigin = "anonymous";
+  defaultImg.onload = () => {
+    canvas.width = defaultImg.width;
+    canvas.height = defaultImg.height;
+    ctx.drawImage(defaultImg, 0, 0);
+
+    const centerX = Math.floor(defaultImg.width / 2);
+    const centerY = Math.floor(defaultImg.height / 2);
+    const pixel = ctx.getImageData(centerX, centerY, 1, 1).data;
+    const hex = #${[...pixel].slice(0, 3).map(x => x.toString(16).padStart(2, '0')).join('')};
+    const rgb = rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]});
+
+    document.getElementById('colorSwatch').style.background = hex;
+    document.getElementById('hexValue').textContent = hex;
+    document.getElementById('rgbValue').textContent = rgb;
+    document.getElementById('xyValue').textContent = ${centerX}, ${centerY};
+    document.getElementById('pickedColorInfo').style.display = 'flex';
+    showColorUsage(hex);
+
+    colorDisplay.innerHTML = 
+  <div class="color-box">
+    <div class="swatch" style="background: ${hex};"></div>
+    <div>
+      <div class="value-box">HEX: ${hex}</div>
+      <div class="value-box">RGB: ${rgb}</div>
+    </div>
+  </div>;
+  };
+  
+  defaultImg.src = "https://medias.artmajeur.com/standard/11587544_1.jpg?v=1739353802";
+});
+</script>
+<script>
+const imageInput = document.getElementById('imageInput');
+const canvas = document.getElementById('imageCanvas');
+const ctx = canvas.getContext('2d');
+const colorSwatch = document.getElementById('colorSwatch');
+const hexValue = document.getElementById('hexValue');
+const rgbValue = document.getElementById('rgbValue');
+const xyValue = document.getElementById('xyValue');
+const pickedColorInfo = document.getElementById('pickedColorInfo');
+
+
+imageInput.addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function (event) {
+    const image = new Image();
+    image.onload = () => {
+      canvas.width = image.width;
+      canvas.height = image.height;
+      ctx.drawImage(image, 0, 0);
+    };
+    image.src = event.target.result;
+  };
+  reader.readAsDataURL(file);
+});
+
+canvas.addEventListener('click', e => {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const x = Math.floor((e.clientX - rect.left) * scaleX);
+  const y = Math.floor((e.clientY - rect.top) * scaleY);
+  const pixel = ctx.getImageData(x, y, 1, 1).data;
+  const r = pixel[0];
+  const g = pixel[1];
+  const b = pixel[2];
+  const hex = rgbToHex(r, g, b);
+
+  colorSwatch.style.background = hex;
+  hexValue.textContent = hex;
+  rgbValue.textContent = rgb(${r}, ${g}, ${b});
+  xyValue.textContent = ${x}, ${y};
+  pickedColorInfo.style.display = 'flex';
+  showColorUsage(hex);
+});
+
+function rgbToHex(r, g, b) {
+  return "#" + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+}
+
+function rgbToHslInt(hex) {
+  let r = parseInt(hex.substring(1,3), 16) / 255;
+  let g = parseInt(hex.substring(3,5), 16) / 255;
+  let b = parseInt(hex.substring(5,7), 16) / 255;
+  let max = Math.max(r, g, b), min = Math.min(r, g, b);
+  let h, s, l = (max + min) / 2;
+  if (max === min) {
+    h = 0;
+  } else {
+    let d = max - min;
+    switch (max) {
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      case b: h = (r - g) / d + 4; break;
+    }
+    h /= 6;
+  }
+  return Math.round(h * 360);
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+let usageChart;
+function showColorUsage(hex) {
+  const usageBox = document.getElementById('colorUsageBox');
+  const h = rgbToHslInt(hex);
+  let trend = 50;
+  if (h < 30 || h > 330) trend = 76;
+  else if (h < 60) trend = 68;
+  else if (h < 90) trend = 51;
+  else if (h < 150) trend = 83;
+  else if (h < 210) trend = 91;
+  else if (h < 270) trend = 66;
+  else trend = 58;
+  usageBox.style.display = 'block';
+
+  const ctx = document.getElementById('usageChart').getContext('2d');
+  if (usageChart) usageChart.destroy();
+  usageChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Popularity %'],
+      datasets: [{
+        label: '2025 Trend',
+        data: [trend],
+        backgroundColor: hex,
+        borderRadius: 6
+      }]
+    },
+    options: {
+      animation: {
+        duration: 800,
+        easing: 'easeOutBounce'
+      },
+      indexAxis: 'y',
+      scales: {
+        x: { min: 0, max: 100, ticks: { color: '#f8fafc' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+        y: { ticks: { color: '#f8fafc' }, grid: { display: false } }
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: '#1e293b', titleColor: '#fff', bodyColor: '#e2e8f0' }
+      }
+    }
+  });
+}
+</script>
+<script src="/script.js"></script>
+<script>
+const canvas = document.getElementById('imageCanvas');
+const ctx = canvas.getContext('2d');
+const colorSwatch = document.getElementById('colorSwatch');
+const hexValue = document.getElementById('hexValue');
+const rgbValue = document.getElementById('rgbValue');
+const xyValue = document.getElementById('xyValue');
+const pickedColorInfo = document.getElementById('pickedColorInfo');
+
+function extractColor(x, y) {
+  const pixel = ctx.getImageData(x, y, 1, 1).data;
+  const r = pixel[0], g = pixel[1], b = pixel[2];
+  const hex = "#" + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+  colorSwatch.style.background = hex;
+  hexValue.textContent = hex;
+  rgbValue.textContent = `rgb(${r}, ${g}, ${b})`;
+  xyValue.textContent = `${x}, ${y}`;
+  pickedColorInfo.style.display = 'flex';
+  showColorUsage(hex);
+}
+
+canvas.addEventListener('click', function(e) {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const x = Math.floor((e.clientX - rect.left) * scaleX);
+  const y = Math.floor((e.clientY - rect.top) * scaleY);
+  extractColor(x, y);
+});
+
+document.getElementById('imageInput').addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function (event) {
+    const image = new Image();
+    image.onload = function () {
+      canvas.width = image.width;
+      canvas.height = image.height;
+      ctx.drawImage(image, 0, 0);
+    };
+    image.src = event.target.result;
+  };
+  reader.readAsDataURL(file);
+});
+
+function loadImageFromURL() {
+  const url = document.getElementById('imageUrlInput').value;
+  const img = new Image();
+  img.crossOrigin = "anonymous";
+  img.onload = function () {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage(img, 0, 0);
+    extractColor(Math.floor(img.width / 2), Math.floor(img.height / 2));
+  };
+  img.onerror = function () {
+    alert("❌ Could not load image. Use a direct image URL ending in .jpg, .png, or .webp.");
+  };
+  img.src = url;
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const defaultImg = new Image();
+  defaultImg.crossOrigin = "anonymous";
+  defaultImg.onload = () => {
+    canvas.width = defaultImg.width;
+    canvas.height = defaultImg.height;
+    ctx.drawImage(defaultImg, 0, 0);
+    extractColor(Math.floor(defaultImg.width / 2), Math.floor(defaultImg.height / 2));
+  };
+  defaultImg.src = "https://medias.artmajeur.com/standard/11587544_1.jpg?v=1739353802";
+});
+</script>
+<script>
+function rgbToHslInt(hex) {
+  let r = parseInt(hex.substring(1,3), 16) / 255;
+  let g = parseInt(hex.substring(3,5), 16) / 255;
+  let b = parseInt(hex.substring(5,7), 16) / 255;
+  let max = Math.max(r, g, b), min = Math.min(r, g, b);
+  let h, s, l = (max + min) / 2;
+  if (max === min) {
+    h = 0;
+  } else {
+    let d = max - min;
+    switch (max) {
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      case b: h = (r - g) / d + 4; break;
+    }
+    h /= 6;
+  }
+  return Math.round(h * 360);
+}
+</script>
+<script>
+const zoomCanvas = document.getElementById('zoomCanvas');
+const zoomCtx = zoomCanvas.getContext('2d');
+
+let zoomFrozen = false;
+let frozenX = 0;
+let frozenY = 0;
+
+// Mouse move zoom (live unless frozen)
+canvas.addEventListener('mousemove', function (e) {
+  if (zoomFrozen) return;
+
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const x = Math.floor((e.clientX - rect.left) * scaleX);
+  const y = Math.floor((e.clientY - rect.top) * scaleY);
+
+  updateZoom(x, y, e.pageX, e.pageY);
+});
+
+// Toggle freeze on click
+canvas.addEventListener('click', function (e) {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const x = Math.floor((e.clientX - rect.left) * scaleX);
+  const y = Math.floor((e.clientY - rect.top) * scaleY);
+
+  if (zoomFrozen) {
+    zoomFrozen = false;
+    zoomCanvas.style.display = 'none';
+  } else {
+    zoomFrozen = true;
+    frozenX = x;
+    frozenY = y;
+    updateZoom(frozenX, frozenY, e.pageX, e.pageY);
+  }
+});
+
+// Hide zoom on leave (if not frozen)
+canvas.addEventListener('mouseleave', function () {
+  if (!zoomFrozen) zoomCanvas.style.display = 'none';
+});
+
+function updateZoom(x, y, pageX, pageY) {
+  zoomCanvas.style.display = 'block';
+  zoomCanvas.style.left = (pageX + 15) + 'px';
+  zoomCanvas.style.top = (pageY + 15) + 'px';
+
+  const zoomSize = 10;
+  const zoomScale = 10;
+  const srcX = Math.max(0, x - 5);
+  const srcY = Math.max(0, y - 5);
+
+  try {
+    const imageData = ctx.getImageData(srcX, srcY, zoomSize, zoomSize);
+    zoomCanvas.width = zoomSize * zoomScale;
+    zoomCanvas.height = zoomSize * zoomScale;
+
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = zoomSize;
+    tempCanvas.height = zoomSize;
+    tempCanvas.getContext('2d').putImageData(imageData, 0, 0);
+
+    zoomCtx.imageSmoothingEnabled = false;
+    zoomCtx.clearRect(0, 0, zoomCanvas.width, zoomCanvas.height);
+    zoomCtx.drawImage(tempCanvas, 0, 0, zoomCanvas.width, zoomCanvas.height);
+  } catch (err) {
+    zoomCanvas.style.display = 'none';
+  }
+}
+</script>
+<script>
+zoomCanvas.addEventListener('click', function (e) {
+  if (!zoomFrozen) return;
+
+  const rect = zoomCanvas.getBoundingClientRect();
+  const scaleX = zoomCanvas.width / rect.width;
+  const scaleY = zoomCanvas.height / rect.height;
+  const x = Math.floor((e.clientX - rect.left) * scaleX);
+  const y = Math.floor((e.clientY - rect.top) * scaleY);
+
+  try {
+    const imageData = zoomCtx.getImageData(x, y, 1, 1).data;
+    const r = imageData[0], g = imageData[1], b = imageData[2];
+    const hex = "#" + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+
+    const colorSwatch = document.getElementById('colorSwatch');
+    const hexValue = document.getElementById('hexValue');
+    const rgbValue = document.getElementById('rgbValue');
+    const xyValue = document.getElementById('xyValue');
+    const pickedColorInfo = document.getElementById('pickedColorInfo');
+
+    colorSwatch.style.background = hex;
+    hexValue.textContent = hex;
+    rgbValue.textContent = `rgb(${r}, ${g}, ${b})`;
+    xyValue.textContent = `Zoom: ${x}, ${y}`;
+    pickedColorInfo.style.display = 'flex';
+
+    showColorUsage(hex);
+    generatePalette(hex);
+  } catch (err) {
+    console.warn("Zoom canvas click error:", err);
+  }
+});
+</script><script>
+zoomCanvas.addEventListener('click', function (e) {
+  if (!zoomFrozen) return;
+
+  const rect = zoomCanvas.getBoundingClientRect();
+  const scaleX = zoomCanvas.width / rect.width;
+  const scaleY = zoomCanvas.height / rect.height;
+  const x = Math.floor((e.clientX - rect.left) * scaleX);
+  const y = Math.floor((e.clientY - rect.top) * scaleY);
+
+  try {
+    const imageData = zoomCtx.getImageData(x, y, 1, 1).data;
+    const r = imageData[0], g = imageData[1], b = imageData[2];
+    const hex = "#" + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+
+    const colorSwatch = document.getElementById('colorSwatch');
+    const hexValue = document.getElementById('hexValue');
+    const rgbValue = document.getElementById('rgbValue');
+    const xyValue = document.getElementById('xyValue');
+    const pickedColorInfo = document.getElementById('pickedColorInfo');
+
+    colorSwatch.style.background = hex;
+    hexValue.textContent = hex;
+    rgbValue.textContent = `rgb(${r}, ${g}, ${b})`;
+    xyValue.textContent = `Zoom: ${x}, ${y}`;
+    pickedColorInfo.style.display = 'flex';
+
+    showColorUsage(hex);
+    generatePalette(hex);
+  } catch (err) {
+    console.warn("Zoom canvas click error:", err);
+  }
+});
+</script><script>
+zoomCanvas.addEventListener('click', function (e) {
+  if (!zoomFrozen) return;
+
+  const rect = zoomCanvas.getBoundingClientRect();
+  const scaleX = zoomCanvas.width / rect.width;
+  const scaleY = zoomCanvas.height / rect.height;
+  const x = Math.floor((e.clientX - rect.left) * scaleX);
+  const y = Math.floor((e.clientY - rect.top) * scaleY);
+
+  try {
+    const imageData = zoomCtx.getImageData(x, y, 1, 1).data;
+    const r = imageData[0], g = imageData[1], b = imageData[2];
+    const hex = "#" + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+
+    const colorSwatch = document.getElementById('colorSwatch');
+    const hexValue = document.getElementById('hexValue');
+    const rgbValue = document.getElementById('rgbValue');
+    const xyValue = document.getElementById('xyValue');
+    const pickedColorInfo = document.getElementById('pickedColorInfo');
+
+    colorSwatch.style.background = hex;
+    hexValue.textContent = hex;
+    rgbValue.textContent = `rgb(${r}, ${g}, ${b})`;
+    xyValue.textContent = `Zoom: ${x}, ${y}`;
+    pickedColorInfo.style.display = 'flex';
+
+    showColorUsage(hex);
+    generatePalette(hex);
+  } catch (err) {
+    console.warn("Zoom canvas click error:", err);
+  }
+});
+</script><script>
+function generatePalette(hex) {
+  const preview = document.getElementById("palettePreview");
+  preview.innerHTML = "";
+
+  const colors = generateHarmonyColors(hex);
+  colors.forEach(color => {
+    const box = document.createElement("div");
+    
+box.style = 'width:100px;height:auto;padding:0.5rem;border-radius:6px;background:var(--card-bg); border:2px solid #ccc; text-align:center; font-size: 0.8rem; color:white;';
+const swatch = document.createElement("div");
+swatch.style = `width:60px;height:60px;margin:auto;border-radius:4px;background:${color};margin-bottom:0.3rem;`;
+const hexText = document.createElement("div");
+hexText.textContent = color;
+const rgbText = document.createElement("div");
+const r = parseInt(color.substr(1, 2), 16);
+const g = parseInt(color.substr(3, 2), 16);
+const b = parseInt(color.substr(5, 2), 16);
+rgbText.textContent = `rgb(${r}, ${g}, ${b})`;
+
+box.appendChild(swatch);
+box.appendChild(hexText);
+box.appendChild(rgbText);
+
+    box.title = color;
+    preview.appendChild(box);
+  });
+}
+
+function generateHarmonyColors(hex) {
+  const hsl = hexToHSL(hex);
+  const palette = [];
+
+  [0, 30, 60, 180, 210].forEach(offset => {
+    let h = (hsl.h + offset) % 360;
+    palette.push(hslToHex(h, hsl.s, hsl.l));
+  });
+
+  return palette;
+}
+
+function hexToHSL(H) {
+  let r = parseInt(H.substring(1,3),16)/255;
+  let g = parseInt(H.substring(3,5),16)/255;
+  let b = parseInt(H.substring(5,7),16)/255;
+  let cmin = Math.min(r,g,b),
+      cmax = Math.max(r,g,b),
+      delta = cmax - cmin,
+      h = 0, s = 0, l = 0;
+
+  if (delta === 0) h = 0;
+  else if (cmax === r) h = ((g - b) / delta) % 6;
+  else if (cmax === g) h = (b - r) / delta + 2;
+  else h = (r - g) / delta + 4;
+
+  h = Math.round(h * 60);
+  if (h < 0) h += 360;
+
+  l = (cmax + cmin) / 2;
+  s = delta === 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+  s = +(s * 100).toFixed(1);
+  l = +(l * 100).toFixed(1);
+
+  return {h, s, l};
+}
+
+function hslToHex(h, s, l) {
+  s /= 100;
+  l /= 100;
+
+  let c = (1 - Math.abs(2 * l - 1)) * s,
+      x = c * (1 - Math.abs((h / 60) % 2 - 1)),
+      m = l - c/2,
+      r = 0, g = 0, b = 0;
+
+  if (0 <= h && h < 60) { r = c; g = x; b = 0; }
+  else if (60 <= h && h < 120) { r = x; g = c; b = 0; }
+  else if (120 <= h && h < 180) { r = 0; g = c; b = x; }
+  else if (180 <= h && h < 240) { r = 0; g = x; b = c; }
+  else if (240 <= h && h < 300) { r = x; g = 0; b = c; }
+  else if (300 <= h && h < 360) { r = c; g = 0; b = x; }
+
+  r = Math.round((r + m) * 255).toString(16).padStart(2, "0");
+  g = Math.round((g + m) * 255).toString(16).padStart(2, "0");
+  b = Math.round((b + m) * 255).toString(16).padStart(2, "0");
+
+  return "#" + r + g + b;
+}
+</script><script>
+const originalExtractColor = extractColor;
+extractColor = function(x, y) {
+  const pixel = ctx.getImageData(x, y, 1, 1).data;
+  const r = pixel[0], g = pixel[1], b = pixel[2];
+  const hex = "#" + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+  colorSwatch.style.background = hex;
+  hexValue.textContent = hex;
+  rgbValue.textContent = `rgb(${r}, ${g}, ${b})`;
+  xyValue.textContent = `${x}, ${y}`;
+  pickedColorInfo.style.display = 'flex';
+  showColorUsage(hex);
+  generatePalette(hex);
+};
+</script>
+</body>
+</html>
