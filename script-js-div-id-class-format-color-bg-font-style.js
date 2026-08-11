@@ -1,4 +1,4 @@
-<script>
+
     
         $("#go").click(function () {
     $("#intro").fadeOut(0);
@@ -51,4 +51,4 @@ $(document).click(function () {
     }
 });
   
-</script>
+
