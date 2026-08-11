@@ -1,4 +1,4 @@
- <script>
+
          
         var time = 0;
 window.setInterval(function () {
@@ -29,4 +29,4 @@ $(".liked").click(function () {
 });
  
         
-        </script>
+       
